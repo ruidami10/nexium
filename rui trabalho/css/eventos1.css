@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+    --cor-primaria: #00ccff;
+    --cor-secundaria: #ff6600;
+    --cor-fundo: #1a1a1d; 
+    --cor-destaque: #ff00ff; 
+    --cor-texto: #ffffff; 
+    --cor-hover: rgba(255, 255, 255, 0.3); 
+    --cor-borda: #ffcc00; 
+    --gradiente-fundo: linear-gradient(135deg, #1a1a1d, #222831);
+}
+
+body {
+    font-family: 'Press Start 2P', cursive; 
+    background: var(--gradiente-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+header {
+    width: 100%;
+    background: var(--cor-fundo);
+    padding: 20px 0;
+    box-shadow: 0px 4px 10px var(--cor-primaria);
+    border-bottom: 3px solid var(--cor-borda);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 30px;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+    text-shadow: 0px 2px 5px var(--cor-destaque);
+    transition: 0.3s ease-in-out;
+}
+
+header .logo:hover {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--cor-secundaria);
+    transform: scale(1.1);
+}
+
+header nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--cor-secundaria);
+    transition: width 0.3s ease-in-out;
+    margin: auto;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Rodapé */
+footer {
+    background-color: #121212;
+    color: #f4f4f4;
+    padding: 30px;
+    font-family: 'Press Start 2P', cursive; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer-section {
+    max-width: 200px;
+    margin: 15px;
+}
+
+.footer-section h2 {
+    font-size: 16px;
+    color: #ffbf00; 
+    margin-bottom: 10px;
+}
+
+.footer-section h2 span {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #ffbf00;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #00ffff; 
+}
+
+.footer-section p {
+    font-size: 12px;
+    color: #cccccc;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 2px solid #444;
+    padding-top: 15px;
+    font-size: 12px;
+    color: #888;
+}
+
+.footer-bottom strong {
+    color: #ffbf00;
+}
+
+footer:hover {
+    background-color: #1a1a1a;
+}
+
+.titulo{
+    color: rgb(255, 255, 255);
+    font-family: "Press Start 2P", system-ui;
+    font-style: normal;
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.6;
+    letter-spacing: 0.4px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    animation: pulsar 1s infinite; 
+
+}
+@keyframes pulsar {
+    0% {
+        color: #ffffff; 
+      }
+      50% {
+        color: purple;
+      }
+      100% {
+        color: #ffffff;
+      }
+    }
+@keyframes imgpulsar {
+    0% {
+        filter: drop-shadow(0 0 5px purple);
+    }
+    50% {
+        filter: drop-shadow(0 0 15px purple); 
+    }
+    100% {
+        filter: drop-shadow(0 0 5px purple); 
+    }
+}
+@keyframes textpulsar {
+    0% {
+        filter: text-shadow(0 0 5px purple);
+    }
+    50% {
+        filter: text-shadow(0 0 15px purple); 
+    }
+    100% {
+        filter: text-shadow(0 0 5px purple); 
+    }
+}
+@keyframes imgpulsar2 {
+    0% {
+        filter: drop-shadow(0 0 5px purple);
+    }
+    50% {
+        filter: drop-shadow(0 0 50px purple); 
+    }
+    100% {
+        filter: drop-shadow(0 0 5px purple); 
+    }
+}
+
+.logo_inicial {
+    width: 200px;
+    border-radius: 10px; 
+    transition: transform 0.3s; 
+
+}
+
+.logo_inicial:hover {
+    transform: scale(1.3); 
+}
+
+.dlogo_inicial{
+    text-align: center;
+    display: block;
+    animation: imgpulsar2 1s infinite;
+}
+
+.site {
+    background-color: rgb(24, 24, 24);
+} 
+
+.tabelaclono {
+    margin: auto;
+    border : #ffffff;
+    width: 90%;
+    border-collapse: collapse; 
+
+}
+
+.imagem_tabela:hover {
+    transform: scale(1.5); 
+    animation: imgpulsar2 1s infinite;
+}
+
+.imagem_tabela {
+    transition: transform 0.3s; 
+    display: inline-block;
+    width: 100%;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center; /* Alinhamento à esquerda */
+    border: 6px solid purple; /* Borda das células */
+    background-color: #000000;
+    color: #f1f1f1;
+
+}
+th {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #000000; /* Cor de fundo para o cabeçalho */
+    width: 100px;
+    font-size: 18px;
+
+    
+}
+td{
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    animation: pulsar 3s infinite;
+    letter-spacing: 1px;
+
+
+}
+
+.video{
+    margin: auto;
+    text-align: center;
+}
+.video2{
+    transition: transform 0.3s; 
+}
+.video2:hover{
+    transform: scale(1.1);
+    animation: imgpulsar2 2s infinite;
+
+}
+
+.noticia{
+    justify-content: center;
+    text-align: center;
+    background-color:#1c2324;
+    padding: 20px;
+}
+.imgnoticia img{
+    transition: transform 0,5s;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    animation: imgpulsar 1.5s infinite;
+}
+.img_noticia:hover{
+    transform: scale(1,1);
+}
+.noticia h1{
+    font-family: "Press Start 2P", system-ui;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+
+
+}
+.noticia h2{
+    font-family: "Press Start 2P", system-ui;
+    font-size: 13px;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+
+}
+.noticia p{
+    font-family: "Press Start 2P", system-ui;
+    width: max-content;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px;
+    letter-spacing: 2px;
+    border: 3px solid rgb(170, 0, 255);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.noticia p:hover{
+    animation: pulsar 1s infinite;
+
+}
+/* Estilo para o contêiner do carrossel */
+.div-slider {
+    width: auto; /* Largura automática */
+    height: 400px; /* Altura do carrossel */
+    text-align: center; /* Centraliza o conteúdo textualmente */
+    animation: imgpulsar2 2s infinite;
+    margin-bottom: 10%;
+
+}
+
+/* Estilo para o contêiner dos slides */
+.slides-front {
+    padding: 0; /* Remove o preenchimento */
+    width: 980px; /* Largura do carrossel */
+    height: 370px; /* Altura do carrossel */
+    display: block; /* Exibe o contêiner como bloco */
+    margin: auto; /* Centraliza o contêiner horizontalmente */
+    position: relative; /* Permite posicionamento absoluto dos filhos */
+}
+
+/* Desativa a seleção de texto para todos os elementos dentro de slides-front */
+.slides-front * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+/* Esconde os inputs de controle dos slides */
+.slides-front input {
+    display: none;
+}
+
+/* Estilo para o contêiner dos slides */
+.slide-container {
+    display: block; /* Exibe o contêiner como bloco */
+}
+
+/* Estilo para cada slide */
+.slide {
+    top: 0; /* Posiciona o slide no topo do contêiner */
+    opacity: 0; /* Torna o slide invisível inicialmente */
+    width: 980px; /* Largura do slide */
+    height: 500px; /* Altura do slide */
+    display: block; /* Exibe o slide como bloco */
+    position: absolute; /* Posiciona o slide absolutamente dentro do contêiner */
+    transform: scale(0); /* Inicialmente escala o slide para 0 */
+    transition: all .7s ease-in-out 0.1s; /* Transição suave para todas as propriedades */
+}
+
+/* Estilo para a imagem dentro de cada slide */
+.slide img {
+    width: 100%; /* Largura da imagem é 100% do slide */
+    height: 100%; /* Altura da imagem é 100% do slide */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilo para os botões de navegação (setas) */
+.nav label {
+    width: 150px; /* Largura dos botões de navegação */
+    height: 100%; /* Altura dos botões de navegação */
+    display: none; /* Inicialmente escondido */
+    position: absolute; /* Posiciona o botão absolutamente */
+    opacity: 0; /* Torna o botão invisível */
+    z-index: 9; /* Define a ordem de empilhamento (acima dos slides) */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar por cima */
+    transition: opacity .2s; /* Transição suave para a opacidade */
+    color: rgb(255, 255, 255); /* Cor do texto dos botões de navegação */
+    font-size: 156pt; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+    line-height: 480px; /* Altura da linha igual à altura dos botões de navegação */
+    font-family: "Varela Round", sans-serif; /* Fonte dos botões de navegação */
+    background-color: rgba(255, 255, 255, 0); /* Cor de fundo transparente */
+    text-shadow: 0px 0px 15px rgb(119, 119, 119); /* Sombra do texto */
+}
+
+/* Mostra os botões de navegação quando o slide é hover (passa o mouse sobre) */
+.slide:hover + .nav label {
+    opacity: 0.5; /* Torna o botão parcialmente visível */
+}
+
+/* Mostra o botão de navegação quando o mouse passa por cima */
+.nav label:hover {
+    opacity: 1; /* Torna o botão totalmente visível */
+}
+
+/* Posiciona o botão de navegação para avançar slides no lado direito */
+.nav .next {
+    right: 0; /* Alinha à direita */
+}
+
+/* Estilo aplicado aos slides quando o input de controle está checado */
+input:checked + .slide-container .slide {
+    opacity: 1; /* Torna o slide visível */
+    transform: scale(1); /* Restaura a escala do slide para 1 */
+    transition: opacity 1s ease-in-out 0.1s; /* Transição suave para a opacidade */
+}
+
+/* Mostra os botões de navegação quando o input de controle está checado */
+input:checked + .slide-container .nav label {
+    display: block; /* Torna os botões de navegação visíveis */
+}
+
+/* Estilo para os pontos de navegação (indicadores) */
+.nav-dots {
+    width: 100%; /* Largura total do contêiner de pontos */
+    bottom: 9px; /* Posiciona na parte inferior */
+    height: 11px; /* Altura dos pontos */
+    display: block; /* Exibe o contêiner como bloco */
+    position: relative; /* Posiciona relativamente */
+    text-align: center; /* Centraliza os pontos */
+}
+
+/* Estilo para cada ponto de navegação */
+.nav-dots .nav-dot {
+    top: 450px; /* Posiciona os pontos mais abaixo no carrossel */
+    width: 11px; /* Largura dos pontos */
+    height: 11px; /* Altura dos pontos */
+    margin: 0 4px; /* Espaçamento entre os pontos */
+    position: relative; /* Posiciona relativamente */
+    border-radius: 100%; /* Faz os pontos serem circulares */
+    display: inline-block; /* Exibe os pontos em linha */
+    background-color: rgba(255, 255, 255, 0.6); /* Cor de fundo dos pontos */
+}
+
+/* Muda a cor dos pontos quando o mouse passa por cima */
+.nav-dots .nav-dot:hover {
+    cursor: pointer; /* Muda o cursor para uma mão ao passar por cima */
+    background-color: rgba(0, 0, 0, 0.8); /* Torna o fundo mais escuro */
+}
+
+/* Muda a cor dos pontos quando o input correspondente está checado */
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3 {
+    background: rgba(0, 0, 0, 0.8); /* Torna o ponto correspondente mais escuro */
+}
+
+/* Efeito de zoom quando um elemento com a classe 'efeito' é hover */
+.efeito:hover {
+    cursor: pointer; /* Muda o cursor para uma mão ao passar por cima */
+    transition-duration: 1s; /* Duração da transição */
+    transform: scale(1.3, 1.3); /* Aumenta o tamanho do elemento em 1.3x */
+}

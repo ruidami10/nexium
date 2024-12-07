@@ -1,0 +1,243 @@
+@media screen and (max-width: 946px){
+    .menu-toggle {
+        display: block; /* Mostra o botão de abrir no tamanho menor */
+    }
+
+
+    .close-btn {
+        display: block; /* Mostra o botão de fechar no tamanho menor */
+    }
+
+
+    .side-menu {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        overflow-x: hidden;
+        transition: width 0.3s, background-color 0.3s;
+        background-color: #333;
+        padding-top: 35px;
+        z-index: 3;
+    }
+
+
+    /* .side-menu {
+        height: 100%;
+        width: 0px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        transition: width 0.3s, background-color 0.3s;
+        background-color: #333;
+        overflow-x: hidden;
+        transition: width 0.3s;
+        padding-top: 35px;
+        z-index: 3;
+    } */
+
+
+    .side-menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+
+    .side-menu ul {
+        display: flex;
+        flex-direction: column; /* Coloca os itens um abaixo do outro */
+    }
+
+
+    /* .side-menu ul {
+        list-style-type: none;
+        padding: 0;
+        display: block;
+    } */
+
+
+    .side-menu li {
+        padding: 15px 25px;
+        display: block; /* Certifica que cada item ocupe uma linha */
+    }
+
+
+    /* .side-menu li {
+        padding: 15px 25px;
+    } */
+
+
+    .side-menu ul > li > a{
+        color: #f1f1f1;
+        transition: ease 0.5s;
+        transition: color 0.3s;
+    }
+
+
+    .side-menu a {
+        text-decoration: none;
+        display: block; /* Cada link ocupa uma linha inteira */
+        color: #333; /* Cor padrão no modo claro */
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+
+    /* Botão Abrir Menu Lateral */
+    button.light-mode{
+        color: #fff;
+    }
+
+
+    button.dark-mode {
+        color: #333;
+    }
+
+
+    /* Botão Fechar Menu Lateral */
+    .close-btn.light-mode {
+        color: #fff;
+    }
+
+
+    .close-btn.dark-mode {
+        color: #333;
+    }
+
+
+    /* Menu Lateral Cor de Fundo */
+    .side-menu.light-mode {
+        background-color: #333;
+    }
+   
+    .side-menu.light-mode a {
+        color: #f1f1f1;
+    }
+   
+    .side-menu.dark-mode {
+        background-color: #f1f1f1;
+    }
+   
+    .side-menu.dark-mode a {
+        color: #333;
+    }
+
+
+    #con{
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+
+   
+    /* Sessão Evento */
+    main > #eve{
+        padding: 50px 0px;
+    }
+
+
+    main > #eve > div > img{
+        width: 315px;
+        height: 150px;
+        object-fit: cover;
+    }
+
+
+   
+    /* Sessão jogos */
+    main > #jog > div{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+   
+    main > #jog > div > h2{
+        font-size: 2em;
+        color: white;
+        font-weight: 800;
+        line-height: 58px;
+        margin-left: -10px;
+    }
+   
+    main > #jog > div > h3 a{
+        font-size: 1em;
+        color: white;
+        padding: 15px;
+        transition: 0.5s ease;
+    }
+   
+    main > #jog > ul{
+        display: flex;
+        justify-content: center;
+    }
+   
+    main > #jog > ul > li{
+        list-style-type: none;
+        overflow: hidden;
+    }
+   
+    main > #jog > ul > li .poster{
+        height: 600px;
+        width: 337px;
+        object-fit: cover;
+        transition: all 0.5s ease-in-out;
+    }
+   
+    main > #jog > ul > li .poster:hover{
+        scale: calc(1.1);
+    }
+   
+    main > #jog > div > h3 a:hover{
+        background-color: white;
+        color: rgb(0, 0, 0);
+    }
+}
+
+
+
+
+/* Menu - Tela Completa */
+@media screen and (min-width: 947px){
+    .side-menu {
+        width: 766px; /* Menu fica aberto por padrão no tamanho maior */
+        display: flex;
+        align-items: center;
+    }
+
+
+    .side-menu ul{
+        width: 765px;
+    }
+
+
+    .side-menu ul > li > a{
+        transition: ease 0.5s;
+        transition: color 0.3s;
+        color: #f1f1f1;
+    }
+
+
+    .side-menu.dark-mode a {
+        color: #333;
+    }
+
+
+    .side-menu a:hover{
+        background-color: rgb(205, 124, 252);
+        border-radius: 10px;
+    }
+
+
+    .menu-toggle {
+        display: none; /* Esconde o botão de abrir no tamanho maior */
+    }
+
+
+    .close-btn {
+        display: none; /* Esconde o botão de fechar no tamanho maior */
+    }
+}
